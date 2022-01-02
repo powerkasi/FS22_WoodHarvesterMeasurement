@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="63">
+	<author>powerkasi</author>
+    
+	<title>
+		<en>Wood Harvester Measurement</en>
+    </title>
+    
+	<description>
+        <en>
+<![CDATA[
+Wood harvester addon to measure count and volume of cutted splits. 
+There is two type of splits, log and pulpwood.
+Threshold values for pine and spruce logs/pulpwoods can be changed from menu.
+
+Default keys:
+- ',' = Set tree specie to pine
+- '-' = Set tree specie to spruce
+- Alt + m = Open settings menu
+
+Compatible with following mods:
+- Manual Cutting for Wood Harvester
+
+Use following page to post bug reports:
+https://github.com/powerkasi/FS22_WoodHarvesterMeasurement/issues
+
+Version 1.0.0.1:
+- Change default keys
+- Change translation for tree specie to tree type
+
+Version 1.0.0.2:
+- Update to support FS22
+- Finnish translations
+
+Version 1.0.0.3:
+- HUD scale now follows game settings scale
+- HUD offset option
+]]>
+		</en>
+		<de>
+<![CDATA[
+Holzernter-Add-On zum Messen der Anzahl und des Volumens der geschnittenen Spalten.
+Es gibt zwei Arten von Spaltholz, Stammholz und Sperrholz.
+Schwellenwerte für Kiefern- und Fichtenstämme/Zellholz können über das Menü geändert werden.
+
+Standardschlüssel:
+- ',' = Baumart auf Kiefer setzen
+- '-' = Baumart auf Fichte setzen
+- Alt + m = Einstellungsmenü öffnen
+
+Kompatibel mit folgenden Mods:
+- Manuelles Schneiden für Holzerntemaschinen
+
+Verwenden Sie die folgende Seite, um Fehlerberichte zu veröffentlichen:
+https://github.com/powerkasi/FS22_WoodHarvesterMeasurement/issues
+
+Version 1.0.0.1:
+- Standardschlüssel ändern
+- Übersetzung für Baumart in Baumart ändern
+
+Version 1.0.0.2:
+- Update zur Unterstützung von FS22
+- Finnische Übersetzungen
+
+Version 1.0.0.3:
+- Die HUD-Skalierung folgt jetzt der Skala der Spieleinstellungen
+- HUD-Offset-Option
+]]>
+		</de>
+ 	</description>
+	
+	<multiplayer supported="true"/>   
+	<iconFilename>icon.dds</iconFilename>
+	<version>1.0.0.3</version>
+	
+	<extraSourceFiles>
+		<sourceFile filename="Register.lua" />
+	</extraSourceFiles>
+
+		<l10n>
+		<!-- Action Translations -->
+		<text name="input_WHM_OPEN_SETTINGS">
+			<en>Wood Harvester Measurement: Menu</en>
+			<fi>Wood Harvester Measurement: Valikko</fi>
+			<de>Wood Harvester Measurement: Menü</de>
+		</text>
+		<text name="input_WHM_SET_TREE_SPECIE_TO_PINE">
+			<en>Wood Harvester Measurement: Tree type to pine</en>
+			<fi>Wood Harvester Measurement: Aseta puulaji mänty</fi>
+			<de>Wood Harvester Measurement: Baumart auf Kiefer stellen</de>
+		</text>
+		<text name="input_WHM_SET_TREE_SPECIE_TO_SPRUCE">
+			<en>Wood Harvester Measurement: Tree type to spruce</en>
+			<fi>Wood Harvester Measurement: Aseta puulaji kuusi</fi>
+			<de>Wood Harvester Measurement: Baumart auf Fichte stellen</de>
+		</text>
+
+		<!-- GUI Translations -->
+		<text name="WOODHARVESTERMEASUREMENT_HEADER">
+			<en>Wood Harvester Measurement: Menu</en>
+			<fi>Wood Harvester Measurement: Valikko</fi>
+			<de>Wood Harvester Measurement: Menü</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_GLOBAL_TITLE">
+			<en>Global Settings</en>
+			<fi>Yleiset Asetukset</fi>
+			<de>Globale Einstellungen</de>
+		</text>
+
+		 <!-- GUI Global Settings -->
+		<text name="WOODHARVESTERMEASUREMENT_CUT_LENGTH_MIN">
+			<en>Cut length min (m)</en>
+			<fi>Minimi katkaisupituus (m)</fi>
+			<de>Schnittlänge min (m)</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUT_LENGTH_MAX">
+			<en>Cut length max (m)</en>
+			<fi>Maksimi katkaisupituus (m)</fi>
+			<de>Schnittlänge max (m)</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUT_LENGTH_STEP">
+			<en>Cut length step (m)</en>
+			<fi>Katkaisupituuden väli (m)</fi>
+			<de>Schnittlängenschritt (m)</de>
+		</text>
+
+		<!-- GUI Mod Specific Settings -->
+		<text name="WOODHARVESTERMEASUREMENT_MOD_SETTINGS_TITLE">
+			<en>Harvester Settings</en>
+			<fi>Harvesterikohtaiset asetukset</fi>
+			<de>Harvester-Einstellungen</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_PINE_LOG_MIN_DIAMETER">
+			<en>Pine log min diameter (cm)</en>
+			<fi>Mäntytukin minimi läpimitta (cm)</fi>
+			<de>Kiefer-Stammholz min. Ø (cm)</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_PINE_PULPWOOD_MIN_DIAMETER">
+			<en>Pine pulpwood min diameter (cm)</en>
+			<fi>Mäntykuidun minimi läpimitta (cm)</fi>
+			<de>Kiefer-Industrieholz min. Ø (cm)</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPRUCE_LOG_MIN_DIAMETER">
+			<en>Spruce log min diameter (cm)</en>
+			<fi>Kuusitukin minimi läpimitta (cm)</fi>
+			<de>Fichte-Stammholz min. Ø (cm)</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPRUCE_PULPWOOD_MIN_DIAMETER">
+			<en>Spruce pulpwood min diameter (cm)</en>
+			<fi>Kuusikuidun minimi läpimitta</fi>
+			<de>Fichte-Industrieholz min. Ø (cm)</de>
+		</text>
+
+		<!-- GUI Harvester INFO/Settings -->
+		<text name="WOODHARVESTERMEASUREMENT_STATS_TITLE_TOTAL">
+			<en>Harvester Info</en>
+			<fi>Harvesterin tiedot</fi>
+			<de>Harvester-Info</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_VEHICLE_MODEL">
+			<en>Id, name and model</en>
+			<fi>Id, nimi ja malli</fi>
+			<de>ID, Name und Modell</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUBIC_METRE_TOTAL">
+			<en>Total cubic meters cutted</en>
+			<fi>Hakatut kuutiometrit yhteensä</fi>
+			<de>Gesamt Festmeter geschnitten</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_VEHICLE_HUD_POSITION">
+			<en>HUD position</en>
+			<fi>HUD:in sijainti</fi>
+			<de>HUD-Position</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_VEHICLE_HUD_OFFSET">
+			<en>HUD offset</en>
+			<fi>HUD:in offset</fi>
+			<de>HUD-Offset</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_HUD_POSITION_1">
+			<en>Bottom Center</en>
+			<fi>Alhaalla keskellä</fi>
+			<de>Unten in der Mitte</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_HUD_POSITION_2">
+			<en>Bottom Right</en>
+			<fi>Alhaalla oikealla</fi>
+			<de>Unten rechts</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_HUD_POSITION_TOOLTIP">
+			<en>Choose heads-up display position in screen</en>
+			<fi>Valitse HUD-näytön sijainti ruudulla</fi>
+			<de>Wählen Sie die Position des Heads-up-Displays auf dem Bildschirm</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_HUD_OFFSET_TOOLTIP">
+			<en>Choose heads-up display's offset</en>
+			<fi>Valitse HUD-näytön offsetti</fi>
+			<de>Wählen Sie den Offset des Heads-up-Displays</de>
+		</text>
+
+		<!-- GUI Stand Stats -->
+		<text name="WOODHARVESTERMEASUREMENT_STATS_TITLE_STAND">
+			<en>Stand Stats</en>
+			<fi>Leimikon tilastot</fi>
+			<de>Abteilungsstatistik</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPLIT_COUNT_PINE_LOG_STAND">
+			<en>Pine log split count</en>
+			<fi>Mäntytukit</fi>
+			<de>Anzahl des Kiefern-Stammholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPLIT_COUNT_PINE_PULPWOOD_STAND">
+			<en>Pine pulpwood split count</en>
+			<fi>Mäntykuidut</fi>
+			<de>Anzahl des Kiefern-Industrieholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPLIT_COUNT_SPRUCE_LOG_STAND">
+			<en>Spruce log split count</en>
+			<fi>Kuusitukit</fi>
+			<de>Anzahl des Fichten-Stammholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPLIT_COUNT_SPRUCE_PULPWOOD_STAND">
+			<en>Spruce pulpwood split count</en>
+			<fi>Kuusikuidut</fi>
+			<de>Anzahl des Fichten-Industrieholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPLIT_COUNT_UNKNOWN_LOG_STAND">
+			<en>Unknown log split count</en>
+			<fi>Tuntemattomat tukit</fi>
+			<de>Unsortierte Anzahl an Stammholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPLIT_COUNT_UNKNOWN_PULPWOOD_STAND">
+			<en>Unknown pulpwood split count</en>
+			<fi>Tuntemattomat kuidut</fi>
+			<de>Unsortierte Anzahl an Industrieholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPLIT_COUNT_STAND">
+			<en>Total</en>
+			<fi>Yhteensä</fi>
+			<de>Gesamt</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUBIC_METRE_PINE_LOG_STAND">
+			<en>Pine log volume</en>
+			<fi>Mäntytukkien tilavuus</fi>
+			<de>FM Kiefern-Stammholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUBIC_METRE_PINE_PUPWOOD_STAND">
+			<en>Pine pulpwood volume</en>
+			<fi>Mäntykuitujen tilavuus</fi>
+			<de>FM Kiefern-Industrieholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUBIC_METRE_SPRUCE_LOG_STAND">
+			<en>Spruce log volume</en>
+			<fi>Kuusitukkien tilavuus</fi>
+			<de>FM Fichten-Stammholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUBIC_METRE_SPRUCE_PUPWOOD_STAND">
+			<en>Spruce pulpwood volume</en>
+			<fi>Kuusikuitujen tilavuus</fi>
+			<de>FM Fichten-Industrieholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUBIC_METRE_UNKNOWN_LOG_STAND">
+			<en>Unknown log volume</en>
+			<fi>Tuntemattomien tukkien tilavuus</fi>
+			<de>FM Unsortiertes-Stammholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUBIC_METRE_UNKNOWN_PUPWOOD_STAND">
+			<en>Unknown pulpwood volume</en>
+			<fi>Tuntemattomien kuitujen tilavuus</fi>
+			<de>FM Unsortiertes-Industrieholz</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_CUBIC_METRE_STAND">
+			<en>Total</en>
+			<fi>Yhteensä</fi>
+			<de>Gesamt</de>
+		</text>
+
+		<!-- GUI Controls -->
+		<text name="WOODHARVESTERMEASUREMENT_UNDO">
+			<en>Undo</en>
+			<fi>Peruuta</fi>
+			<de>Rückgängig machen</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_RESET_TO_DEFAULT">
+			<en>Reset defaults</en>
+			<fi>Palauta oletusasetukset</fi>
+			<de>Standard</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_RESET_STAND">
+			<en>Reset stand stats</en>
+			<fi>Nollaa leimikon tilastot</fi>
+			<de>Abteilungsstatistik zurücksetzen</de>
+		</text>
+
+		<!-- HUD Translations -->
+		<text name="WOODHARVESTERMEASUREMENT_PINE">
+			<en>PINE</en>
+			<fi>MÄNTY</fi>
+			<de>KIEFER</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_SPRUCE">
+			<en>SPRUCE</en>
+			<fi>KUUSI</fi>
+			<de>FICHTE</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_UNKNOWN_SPECIE">
+			<en>SET TREE TYPE!</en>
+			<fi>ASETA PUULAJI!</fi>
+			<de>BAUMART!</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_LOG">
+			<en>Log</en>
+			<fi>Tukki</fi>
+			<de>Stamm</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_PULPWOOD">
+			<en>Pulpwood</en>
+			<fi>Kuitu</fi>
+			<de>Industrie</de>
+		</text>
+		<text name="WOODHARVESTERMEASUREMENT_UNKNOWN_TREE_TYPE">
+			<en>-</en>
+			<fi>-</fi>
+			<de>-</de>
+		</text>
+	</l10n>
+	
+	<actions>
+		<action name="WHM_OPEN_SETTINGS" category="VEHICLE" ignoreComboMask="false"/>
+		<action name="WHM_SET_TREE_SPECIE_TO_PINE" category="VEHICLE" ignoreComboMask="false"/>
+		<action name="WHM_SET_TREE_SPECIE_TO_SPRUCE" category="VEHICLE" ignoreComboMask="false"/>
+	</actions>
+	
+	<inputBinding>
+		<actionBinding action="WHM_OPEN_SETTINGS">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_m" />
+		</actionBinding>
+		<actionBinding action="WHM_SET_TREE_SPECIE_TO_PINE">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_comma"/>
+		</actionBinding>
+		<actionBinding action="WHM_SET_TREE_SPECIE_TO_SPRUCE">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_slash"/>
+		</actionBinding>
+	</inputBinding>
+	
+</modDesc>

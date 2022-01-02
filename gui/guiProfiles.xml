@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUIProfiles>
+    <Presets>
+        <Preset name="colorFS19Yellow" value="0.9910 0.3865 0.0100 1"/>
+        <Preset name="colorGiantBlue" value="0.1607 0.5137 0.6235 1"/>
+        <Preset name="debugColorRed" value="1.0 0.0 0.0 0.2"/>>
+        <Preset name="colorDisabled" value="0.4 0.4 0.4 1"/>
+    </Presets>
+
+    <Profile name="basicTextInput" extends="ingameMenuGameSettingsTextInput">
+        <Value name="size" value="290px 48px" />
+        <Valee name="margin" value="30px 28px 30px 16px" />
+    </Profile>
+
+    <Profile name="basicMultiTextOptionTitle" extends="multiTextOptionTitle">
+        <Value name="size" value="340px 0px"/>
+    </Profile>
+
+    <Profile name="multiTextOptionTitleHarvester" extends="basicMultiTextOptionTitle">
+        <Value name="size" value="290px 0px"/>
+    </Profile>
+
+    <Profile name="multiTextOptionTitleStandStats" extends="multiTextOptionTitle">
+        <Value name="margin" value="30px 28px 30px 16px"/>
+        <Value name="size" value="340px 0px"/>
+        <Value name="textAlignment" value="right"/>
+    </Profile>
+
+    <Profile name="multiTextOptionTitleTotal" extends="multiTextOptionTitle">
+        <Value name="margin" value="30px 28px 30px 16px"/>
+        <Value name="frameBottomColor" value="$preset_colorGiantBlue"/>
+        <Value name="frameThickness" value="0px 0px 0px 3px"/>
+        <Value name="size" value="340px 30px"/>
+        <Value name="textAlignment" value="right"/>
+        <Value name="hasFrame" value="true"/>
+    </Profile>
+
+    <Profile name="basicText" extends="textDefault">
+        <!-- string [optional] Pixel margin around outer border of element 
+             to leave free when layouting this element (e.g. in BoxLayout) 
+             in reference resolution, defaults to {0, 0, 0, 0}. 
+             Format: "[left]px [top]px [right]px [bottom]px", 
+             e.g. margin="4px 10px 6px 10px" -->
+        <Value name="margin" value="30px 28px 49px 16px"/>
+        <Value name="size" value="321px 18px"/>
+        <Value name="textAlignment" value="center"/>
+    </Profile>
+
+    <Profile name="basicTextHarvesterInfo" extends="basicTextInput">
+        <Value name="textSize" value="18px"/>
+    </Profile>
+
+    <Profile name="basicTextStandStats" extends="ingameMenuGameSettingsTextInput">
+        <Value name="margin" value="30px 28px 30px 12px"/>
+        <Value name="size" value="340px 12px"/>
+        <Value name="textAlignment" value="right"/>
+        <Value name="textSize" value="12px"/>
+    </Profile>
+
+    <Profile name="basicTextTotalStandStats" extends="basicTextStandStats">
+        <Value name="margin" value="30px 35px 30px 20px"/>
+        <Value name="size" value="340px 0px"/>
+    </Profile>
+
+    <Profile name="basicMultiTextOption" extends="multiTextOption">
+        <Value name="margin" value="30px 28px 49px 16px"/>
+    </Profile>
+
+    <Profile name="emptySlot" extends="basicMultiTextOption">
+    </Profile>
+
+    <Profile name="sectionHeaderText" extends="textDefault">
+        <Value name="margin" value="0px 0px 0px 16px"/>
+        <Value name="screenAlign" value="middleCenter"/>
+        <Value name="positionOrigin" value="middleCenter"/>
+        <Value name="textSize" value="20px"/>
+        <Value name="textBold" value="true"/>
+        <Value name="textUpperCase" value="true"/>
+        <Value name="textVerticalAlignment" value="middle"/>
+        <Value name="textAlignment" value="center"/>
+        <Value name="textDisabledColor" value="$preset_colorDisabled"/>
+        <Value name="textWrapWidth" value="400px"/>
+        <Value name="textMaxNumLines" value="2"/>
+    </Profile>
+
+    <Profile name="standStatsSectionHeader" extends="sectionHeaderText">
+        <Value name="margin" value="0px 16px 0px 16px"/>
+    </Profile>
+
+    <!-- DEBUGGING: <Value name="debugEnabled" value="true"/> -->
+</GUIProfiles>

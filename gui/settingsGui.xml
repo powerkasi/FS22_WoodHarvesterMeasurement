@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+
+	<!-- Screen 2580px 1080px -->
+	<GuiElement type="bitmap" profile="uiElementCenter" position="0px 0px" size="1650px 800px">
+		<GuiElement type="bitmap" profile="uiFullInGameBackground" size="1650px 800px"/>
+		<GuiElement type="empty" profile="ingameMenuFrameHeaderPanel" position="0px 0px" size="1200px 100px">
+			<GuiElement type="text" profile="ingameMenuFrameHeaderText" position="50px 0px" size="1150px 64px" text="$l10n_WOODHARVESTERMEASUREMENT_HEADER" />
+		</GuiElement>
+
+		<GuiElement type="empty" profile="uiElementCenter" position="0px -14px" size="1650px 628px">
+
+			<!-- GLOBAL SETTINGS -->
+			<GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="50px -0px" size="400px 580px">
+				<GuiElement type="text" profile="sectionHeaderText" size="400px 24px" text="$l10n_WOODHARVESTERMEASUREMENT_GLOBAL_TITLE" />
+
+				<GuiElement name="cutLengthMin" type="textInput" profile="basicTextInput" onCreate="onCreateSpecTextInput">
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_CUT_LENGTH_MIN" />
+				</GuiElement>
+				<GuiElement name="cutLengthMax" type="textInput" profile="basicTextInput" onCreate="onCreateSpecTextInput">
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_CUT_LENGTH_MAX"/>
+				</GuiElement>
+				<GuiElement name="cutLengthStep" type="textInput" profile="basicTextInput" onCreate="onCreateSpecTextInput">
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_CUT_LENGTH_STEP"/>
+				</GuiElement>
+			</GuiElement>
+
+			<!-- HARVESTER SPECIFIC SETTINGS -->
+			<GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="450px 0px" size="400px 580px">
+				<GuiElement type="text" profile="sectionHeaderText" size="400px 24px" text="$l10n_WOODHARVESTERMEASUREMENT_MOD_SETTINGS_TITLE" />
+
+				<GuiElement name="radiusThresholds.pineLogMinRadius" type="textInput" profile="basicTextInput" onCreate="onCreateTextInput">
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_PINE_LOG_MIN_DIAMETER"/>
+				</GuiElement>
+				<GuiElement name="radiusThresholds.pinePulpwoodMinRadius" type="textInput" profile="basicTextInput" onCreate="onCreateTextInput">
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_PINE_PULPWOOD_MIN_DIAMETER"/>
+				</GuiElement>
+				<GuiElement name="radiusThresholds.spruceLogMinRadius" type="textInput" profile="basicTextInput" onCreate="onCreateTextInput">
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_SPRUCE_LOG_MIN_DIAMETER"/>
+				</GuiElement>
+				<GuiElement name="radiusThresholds.sprucePulpwoodMinRadius" type="textInput" profile="basicTextInput" onCreate="onCreateTextInput">
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_SPRUCE_PULPWOOD_MIN_DIAMETER" />
+				</GuiElement>
+				<GuiElement name="hudConfigs.position" type="multiTextOption" profile="basicTextInput" onCreate="onCreateMultiTextOption" toolTipElementId="ingameMenuHelpBoxText" toolTipText="">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" size="194px 48px" />
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_VEHICLE_HUD_POSITION" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" size="194px 48px" />
+				</GuiElement>
+				<GuiElement name="hudConfigs.offsetX" type="multiTextOption" profile="basicTextInput" onCreate="onCreateMultiTextOption" toolTipElementId="ingameMenuHelpBoxText" toolTipText="">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" size="194px 48px" />
+					<GuiElement type="text" profile="basicMultiTextOptionTitle" text="$l10n_WOODHARVESTERMEASUREMENT_VEHICLE_HUD_OFFSET" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" size="194px 48px" />
+				</GuiElement>
+			</GuiElement>
+
+			<!-- HARVESTTER INFO -->
+			<GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="850px 0px" size="350px 580px">
+				<GuiElement name="modTotalStatsText" type="text" profile="sectionHeaderText" size="350px 24px" text="$l10n_WOODHARVESTERMEASUREMENT_STATS_TITLE_TOTAL" />
+				<GuiElement name="idNameModel" type="text" profile="basicTextHarvesterInfo" onCreate="onCreateCustomText">
+					<GuiElement type="text" profile="multiTextOptionTitleHarvester" text="$l10n_WOODHARVESTERMEASUREMENT_VEHICLE_MODEL"/>
+				</GuiElement>
+				<GuiElement name="cubicMetreTotal" type="text" profile="basicTextHarvesterInfo" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleHarvester" text="$l10n_WOODHARVESTERMEASUREMENT_CUBIC_METRE_TOTAL"/>
+				</GuiElement>
+			</GuiElement>
+
+			<!-- STAND STATS -->
+			<GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="1200px 100px" size="400px 800px">
+				<GuiElement name="modStandStatsText" type="text" profile="standStatsSectionHeader" size="400px 24px" textWrapWidth="350px" text="$l10n_WOODHARVESTERMEASUREMENT_STATS_TITLE_STAND" />
+
+				<GuiElement name="currentStand.splitCountPineLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_SPLIT_COUNT_PINE_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountPinePulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_SPLIT_COUNT_PINE_PULPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountSpruceLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_SPLIT_COUNT_SPRUCE_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountSprucePulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_SPLIT_COUNT_SPRUCE_PULPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountUnknownLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_SPLIT_COUNT_UNKNOWN_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountUnknownPulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_SPLIT_COUNT_UNKNOWN_PULPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountStand" type="text" profile="basicTextTotalStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleTotal" text="$l10n_WOODHARVESTERMEASUREMENT_SPLIT_COUNT_STAND"/>
+				</GuiElement>
+
+				<GuiElement name="currentStand.cubicMetrePineLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_CUBIC_METRE_PINE_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetrePinePulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_CUBIC_METRE_PINE_PUPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreSpruceLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_CUBIC_METRE_SPRUCE_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreSprucePulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_CUBIC_METRE_SPRUCE_PUPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreUnknownLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_CUBIC_METRE_UNKNOWN_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreUnknownPulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleStandStats" text="$l10n_WOODHARVESTERMEASUREMENT_CUBIC_METRE_UNKNOWN_PUPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreStand" type="text" profile="basicTextTotalStandStats" onCreate="onCreateText">
+					<GuiElement type="text" profile="multiTextOptionTitleTotal" text="$l10n_WOODHARVESTERMEASUREMENT_CUBIC_METRE_STAND"/>
+				</GuiElement>
+			</GuiElement>
+
+
+			<!-- HELP TEXT -->
+			<GuiElement type="bitmap" name="helpElement" profile="ingameMenuHelpRowBg" position="50px -5px 0px 0px" size="1150px 48px" id="ingameMenuHelpBox" visible="false" onCreate="onCreateHelpText">
+				<GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />
+				<GuiElement type="text" name="helpText" profile="ingameMenuHelpRowText" id="ingameMenuHelpBoxText" text="" onCreate="onCreateHelpText" onTextChanged="onHelpTextChanged"/>
+			</GuiElement>
+		</GuiElement>
+
+		<!-- BUTTONS -->
+		<GuiElement type="flowLayout" profile="buttonBoxDocked" position="50px 0px" size="1150px 70px" id="buttonsPC">
+			<GuiElement type="button" profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton" />
+			<GuiElement type="button" profile="buttonOK" text="$l10n_button_save" onClick="onClickSave" />
+			<GuiElement type="button" profile="buttonCancel" text="$l10n_WOODHARVESTERMEASUREMENT_UNDO" onClick="onClickUndoButton" />
+			<GuiElement type="button" profile="buttonCancel" text="$l10n_WOODHARVESTERMEASUREMENT_RESET_TO_DEFAULT" onClick="onClickResetDefaultButton" />
+			<GuiElement type="button" profile="buttonCancel" text="$l10n_WOODHARVESTERMEASUREMENT_RESET_STAND" onClick="onClickResetStandStats" />
+		</GuiElement>
+	</GuiElement>
+</GUI>
